@@ -245,7 +245,8 @@ def on_chat_message(msg):
         except sr.RequestError as e:
             print("Sphinx error; {0}".format(e))
             bot.sendMessage(chat_id,"An error occurred, please try later")
-
+  
+        # The two audio files are then removed when no longer needed
         os.remove("voice.ogg")
         os.remove("voice.wav")
 
@@ -256,7 +257,7 @@ def on_chat_message(msg):
 def on_inline_query(msg):
     query_id, chat_id, query_string= telepot.glance(msg, flavor='inline_query')
 
-    # Computes inline translations to/from Japanese
+    # Computes inline translations to/from Japanese in a similar way to how it is done in the case of private messages 
     def compute():
         print ('Inline Query:', query_id, chat_id, query_string)
         string_nt= str(query_string)
