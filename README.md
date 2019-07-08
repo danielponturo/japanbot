@@ -1,6 +1,6 @@
 # japanbot
 Telegram bot that translates from/to Japanese, written in Python (using the Telepot framework) as a high school final year project
-(2017-2018 academic year). 
+(2017-2018 academic year).  
 The project is a showcase of various skills learned both in an academic context and on my own. The aim of the bot is to provide an 
 easy and reliable way of translating text and voice messages on Telegram, by making use of the Google Translate API and CMU Sphinx
 speech recognition software (through SpeechRecognition library), as well as being able to pronounce Japanese text thanks to gTTS,
